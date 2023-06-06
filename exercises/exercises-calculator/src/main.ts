@@ -1,22 +1,37 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
+
+// Styles
+import './assets/css/global-styles.css'
+import './assets/css/calculator.css'
+
 import { setupCounter } from './counter'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+  <div class='cal'>
+    <div class='cal__header'>
+      <h4>CALCULATOR</h4>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
+
+    <div class='cal__body'>
+      <div class='cal__body-screen01'></div>
+      <div class='cal__body-screen02'></div>
+      <div class='cal__body-nums'>
+        <div class='cal__body-nums-numxx'></div>
+        <div class='cal__body-nums-numxx'></div>
+        <div class='cal__body-nums-numxx'></div>
+        <div class='cal__body-nums-numxx'></div>
+        
+        <div class='cal__body-nums-numxx'></div>
+        <div class='cal__body-nums-numxx'></div>
+        <div class='cal__body-nums-numxx'></div>
+        <div class='cal__body-nums-numxx'></div>
+
+        <div class='cal__body-nums-numxx'></div>
+        <div class='cal__body-nums-numxx'></div>
+        <div class='cal__body-nums-numxx'></div>
+        <div class='cal__body-nums-numxx'></div>
+      </div>
+    </div>
+    
   </div>
 `
 

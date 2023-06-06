@@ -1,0 +1,15 @@
+
+.cal {
+    display: flex;
+    justify-content: center;
+}
+
+.cal__header {
+    text-align: center;
+}
+
+.cal__body {
+    background-color: #424242;
+    box-shadow: .2rem .2rem .2rem .2rem rgba(255, 255, 255, 255, 0.2);
+    width: 20rem;
+}
