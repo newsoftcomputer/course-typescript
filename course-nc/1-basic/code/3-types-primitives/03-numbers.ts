@@ -4,6 +4,14 @@
  simplemente escríbalos directamente en JavaScript.
 */
 
+// Numbers
+let entero: number = 42
+let longintegersseperators: number = 7_789_156_468
+let decimal: number = 26.05
+let binarios: number = 0b1001010101
+let hexadecimal : number = 0x0123456789abcdf 
+let octales: number = 0o7000
+
 console.log (12345);
 
 /* Decimales y fracciones 
@@ -64,7 +72,7 @@ console.log(num1, num2)
 // El método toFixed() formatea un número usando notación de punto fijo. 
 
 let num_entero_string = '5'
-let num_entero: string = 8
+// let num_entero2: string = 8
 let num_decimal: number = 7.19
 
 

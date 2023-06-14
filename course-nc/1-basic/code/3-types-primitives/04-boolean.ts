@@ -14,3 +14,7 @@ estado = true;
 console.log (estado);
 
 // OUTPUT: true
+
+ // Boolean
+ let state1: boolean = true
+ let state2: boolean = false
