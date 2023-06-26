@@ -3,6 +3,7 @@
 
     - Los types alias sirven para crear tipos propios
     - Se deben declarar con Pascal Case (Primeras letras de palabra en mayuscula ej1: Color, ej2: ColorHexadecimal)
+    - doc: https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases
 
     Examples
 

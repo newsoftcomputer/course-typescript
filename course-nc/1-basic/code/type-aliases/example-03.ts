@@ -20,22 +20,22 @@ console.log(createHexadecimal)
 
 
 // Example 02
+// Le damos formato tipo email a la prop format01
 type EmailFormat = {
-    // Le damos formato tipo email a la prop format01
-    format?: `${string}@${string}.${string}`
+    format: `${string}@${string}.${string}`
 }
 
-function createEmail(e: EmailFormat): EmailFormat {
-
-    const { format } = e
+function createEmail(email: EmailFormat): EmailFormat {
     
+    const { format } = email
+
     return {
         format
     }
 }
 
-// let email01: EmailFormat = 'andresganc@gmail.com'
-console.log(createEmail('andresganc@gmail.com'))
+const email1 = createEmail({format: 'andresganc@gmail.com'})
+console.log(email1)
 
 
 
