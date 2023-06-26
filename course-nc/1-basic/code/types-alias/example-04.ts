@@ -2,10 +2,10 @@
 // Type Hero
 
 type Hero = {
-    //readonly id: number,
-    name: string,
-    age: number,
-    isActive: boolean
+    readonly id: number
+    name: string
+    age: number
+    isActive?: boolean
 }
 
 
