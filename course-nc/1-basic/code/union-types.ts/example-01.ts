@@ -36,6 +36,8 @@ let value4: A | B = {
 // Show props of type string or number
 let value5: string | number
 
+value5 = 5
+
 if (typeof(value5) === 'string') {
     // Now can show the props of type string
     value5.trim()
