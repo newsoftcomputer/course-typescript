@@ -1,43 +1,10 @@
 
-// El type alias se puede usar para darle formato a un tipo
+// Example Type Color
+type Color = `#${string}`
 
-// Example 01
-type HexadecimalFormat = {
-    // Le damos formato tipo hexadeximal a la prop format01
-    format: `${string}-${string}-${string}-${string}-${string}`
-}
+// Al intentar usar el tipo Color sin # arroja error y asi podemos obligar y evitar futuros errores
+// const hexadeximalColor: Color = '651651'
 
-function createHexadecimal(hex: HexadecimalFormat): HexadecimalFormat {
+const hexadeximalColor: Color = '#651651'
 
-    const { format } = hex
-    
-    return {
-        format: crypto.randomUUID()
-    }
-}
-
-console.log(createHexadecimal)
-
-
-// Example 02
-type EmailFormat = {
-    // Le damos formato tipo email a la prop format01
-    format?: `${string}@${string}.${string}`
-}
-
-function createEmail(e: EmailFormat): EmailFormat {
-
-    const { format } = e
-    
-    return {
-        format
-    }
-}
-
-// let email01: EmailFormat = 'andresganc@gmail.com'
-console.log(createEmail('andresganc@gmail.com'))
-
-
-
-
-
+const colorBlackHexadeximal: Color = '#000000'
