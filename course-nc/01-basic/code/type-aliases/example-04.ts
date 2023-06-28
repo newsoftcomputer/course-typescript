@@ -10,8 +10,18 @@ type Hero = {
     isActive?: boolean
 }
 
-
 // Use 1
+let hero: Hero = {
+    id: crypto.randomUUID(),
+    name: 'Marco',
+    age: 4,
+} 
+
+// Use 2
+let x = hero.isActive = true
+
+
+// Use 3
 function createHero1( hero: Hero ): Hero {
     const { id, name, age, isActive } = hero
 
