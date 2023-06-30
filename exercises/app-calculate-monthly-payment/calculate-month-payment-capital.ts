@@ -45,29 +45,39 @@ const calculateDuesMothCapital = (value: number): number => {
 
     let { loanValue, interestsMonth, dues, duesValue } = cl
 
-    let interestValueMoth: number = 0
-    let valueLoanTemp: number
     let valueLoanCurrent: number = loanValue 
+    let interestValueMoth: number = 0
+    let duesValueMonth: number = 0
+
     let valueCapitalMonth: number = 0
 
     // Calculate Capital month
     for (let index = 0; index < dues; index++) {
-        
-        let duesMothTemp: number
-        // const element = dues[index];
-        valueLoanTemp = loanValue - interestValueMoth - duesValue
-        valueLoanCurrent = valueLoanTemp - duesValue
+        let valueLoanTemp: number
+        let interestValueMothTemp: number
+        let duesValueMonthTemp: number
 
-        valueCapitalMonth = valueLoanCurrent   
-        console.log(valueCapitalMonth)
+        // Capital
+        valueLoanTemp = valueLoanCurrent - duesValue
+        valueLoanCurrent = valueLoanTemp 
+        console.log(`Capital: ${valueLoanCurrent}`)
         
+        // Interest Month
+        interestValueMoth = valueLoanCurrent * interestsMonth / 100
+        interestValueMothTemp = interestValueMoth
+        console.log(`Intereses: ${interestValueMothTemp}`)
+
+        // Dues Value Mont
+        duesValueMonthTemp = duesValue + interestValueMothTemp
+        duesValueMonth = duesValueMonthTemp
+        console.log(`Cuota mes + intereses: ${duesValueMonth}`)
     }
     
-    // Calculate Interest Mont
-    for (let index = 0; index < dues; index++) {
-        interestValueMoth = valueLoanCurrent * interestsMonth / 100
-        console.log(interestValueMoth)
-    }
+    // // Calculate Interest Mont
+    // for (let index = 0; index < dues; index++) {
+    //     interestValueMoth = valueLoanCurrent * interestsMonth / 100
+    //     console.log(interestValueMoth)
+    // }
 
     return valueCapitalMonth
 
@@ -78,32 +88,29 @@ const createLoanCalculateDuesMoth = calculateDuesMothCapital(calculateValueInter
 console.log(createLoanCalculateDuesMoth)
 
 
-
-
-
-function calcularCuotasMensuales(prestamo, tasaInteres, plazo) {
-    // Convertir la tasa de interés anual a mensual
-    var tasaInteresMensual = tasaInteres / 12 / 100;
+// function calcularCuotasMensuales(prestamo, tasaInteres, plazo) {
+//     // Convertir la tasa de interés anual a mensual
+//     var tasaInteresMensual = tasaInteres / 12 / 100;
     
-    // Calcular el número total de pagos
-    var numPagos = plazo * 12;
+//     // Calcular el número total de pagos
+//     var numPagos = plazo * 12;
     
-    // Calcular el factor de amortización
-    var factorAmortizacion = Math.pow(1 + tasaInteresMensual, numPagos) / (Math.pow(1 + tasaInteresMensual, numPagos) - 1);
+//     // Calcular el factor de amortización
+//     var factorAmortizacion = Math.pow(1 + tasaInteresMensual, numPagos) / (Math.pow(1 + tasaInteresMensual, numPagos) - 1);
     
-    // Calcular la cuota mensual
-    var cuotaMensual = prestamo * tasaInteresMensual * factorAmortizacion;
+//     // Calcular la cuota mensual
+//     var cuotaMensual = prestamo * tasaInteresMensual * factorAmortizacion;
     
-    return cuotaMensual.toFixed(2); // Redondear a 2 decimales
-  }
+//     return cuotaMensual.toFixed(2); // Redondear a 2 decimales
+//   }
   
-  // Ejemplo de uso
-  var prestamo = 100000; // Monto del préstamo
-  var tasaInteres = 8; // Tasa de interés anual (%)
-  var plazo = 1; // Plazo del préstamo en años
+//   // Ejemplo de uso
+//   var prestamo = 100000; // Monto del préstamo
+//   var tasaInteres = 8; // Tasa de interés anual (%)
+//   var plazo = 1; // Plazo del préstamo en años
   
-  var cuotaMensual = calcularCuotasMensuales(prestamo, tasaInteres, plazo);
-  console.log("La cuota mensual es: " + cuotaMensual);
+//   var cuotaMensual = calcularCuotasMensuales(prestamo, tasaInteres, plazo);
+//   console.log("La cuota mensual es: " + cuotaMensual);
 
 
 
