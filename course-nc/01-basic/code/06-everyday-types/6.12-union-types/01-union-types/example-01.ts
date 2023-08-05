@@ -14,3 +14,9 @@ let c: String | 5 | Boolean
 c = 'Marco'
 c = 5
 c = true
+
+let typeIdentification: 'Cedula' | 'Pasaporte' | 'Tarjeta de Identidad' | 'Cedula de extranjeria'
+typeIdentification = "Cedula"
+
+let enableAnimationDuration: Boolean | Number = 200
+enableAnimationDuration = 350
